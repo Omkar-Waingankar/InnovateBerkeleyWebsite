@@ -1,0 +1,45 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Need this for bootstrap */
+@import "bootstrap-sprockets"
+@import "bootstrap"
+
+/* Helps so that the body of the page isn't covered by the navbar */
+body
+	padding-top: 100px
+
+/* Lots of vertical offsets, from https://stackoverflow.com/questions/10085723/twitter-bootstrap-add-top-space-between-rows */
+.voffset 
+	margin-top: 2px
+.voffset1
+	margin-top: 5px
+.voffset2
+	margin-top: 10px
+.voffset3
+	margin-top: 15px
+.voffset4
+	margin-top: 30px
+.voffset5
+	margin-top: 40px
+.voffset6
+	margin-top: 60px
+.voffset7
+	margin-top: 80px
+.voffset8
+	margin-top: 100px
+.voffset9
+	margin-top: 150px
