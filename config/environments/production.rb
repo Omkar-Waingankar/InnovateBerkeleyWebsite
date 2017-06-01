@@ -81,6 +81,15 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  # Mailer for Devise FIXME (address, port must be fixed)
+  config.action_mailer.default_url_options = {:host => 'innovateberkeley.org'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.1and1.com",
+    :port    => 587,
+    :domain  => 'innovateberkeley.org'
+  }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end

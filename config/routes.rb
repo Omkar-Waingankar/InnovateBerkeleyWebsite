@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/signup', to: 'signup#index'
+  devise_for :users
+  get '/login', to: 'login#index'
   root 'home#index'
   get '/', to: 'home#index'
 
