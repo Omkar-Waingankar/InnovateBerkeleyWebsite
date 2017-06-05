@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    	<title><%= @title %></title>
+      <% if @title == nil %>
+        <title>Innovate Berkeley</title>
+      <% else %>
+        <title>Innovate Berkeley | <%= @title %></title>
+      <% end %>
     	<%= csrf_meta_tags %>
 
     	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  	</head>
+  </head>
 
   	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -28,6 +32,7 @@
   	</nav>
   	<%= yield %>
 
+
 	<script type="text/javascript">
 		var s = skrollr.init();
 		skrollr.menu.init(s, {
@@ -35,6 +40,14 @@
 				return 300; //Duration of scrolling animation, in ms
 			}
 		});
+
+    $(document).ready(function(){
+      $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(50).slideDown();
+      }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp()
+      });
+    })
 	</script>
 
 </html>
