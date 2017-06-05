@@ -1,0 +1,17 @@
+<% @title=@user.first_name + ' ' + @user.last_name %>
+
+<div class="container text-center voffset9">
+	<div><%= @user.first_name %> <%= @user.last_name %></div>
+	<div><%= @user.email %></div>
+	<% if @user.major != nil && @user.school_year != nil %>
+		<div><%= @user.major %>, <%= @user.school_year %></div>
+	<% end %>
+	<div><%= @user.involvements %></div>
+	<div><%= @user.links %></div>
+	<% if @user.major != nil && @user.school_year != nil %>
+		<div>I'm interested in working on: <br /><%= @user.interests %></div>
+	<% end %>
+	<% if current_user.id == @user.id %>
+		<div><%= link_to('Edit profile', 'users/edit_profile') %></div>
+	<% end %>
+</div>

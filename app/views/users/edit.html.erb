@@ -1,0 +1,43 @@
+<% @title="Edit Profile" %>
+
+<div class="container text-center">
+  <h2>Edit Profile</h2>
+
+  <%= form_for(current_user, as: 'user', url: '/users', html: { method: :put }) do |f| %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :school_year %> <br />
+      <%= f.select :school_year, ['Freshman', 'Sophomore', 'Junior', 'Senior'] %>
+    </div>
+
+    <div class="field">
+      <%= f.label :major %><br />
+      <%= f.text_field :major, autocomplete: "on" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :links %><br />
+      <%= f.text_field :links, autocomplete: "on" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :involvements %><br />
+      <%= f.text_field :involvements, autocomplete: "on" %>
+    </div>
+
+    <div class="field">
+      <%= f.label "What are you interested in working on?" %><br />
+      <%= f.text_field :interests, autocomplete: "on" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Update" %>
+    </div>
+  <% end %>
+
+</div>
