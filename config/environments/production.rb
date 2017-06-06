@@ -82,12 +82,12 @@ Rails.application.configure do
   end
 
   # Mailer for Devise FIXME (address, port must be fixed)
-  config.action_mailer.default_url_options = { :host => 'smtp.mailgun.org' }
+  config.action_mailer.default_url_options = { :host => 'smtp.mailgun.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :user_name => ENV['username'],
     :password => ENV['password'],
-    :address => 'smtp.mailgun.org',
+    :address => 'smtp.mailgun.com',
     :domain => ENV['domain'],
     :port => 587,
     :authentication => :plain
