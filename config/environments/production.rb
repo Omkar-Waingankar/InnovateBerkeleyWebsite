@@ -82,15 +82,15 @@ Rails.application.configure do
   end
 
   # Mailer for Devise FIXME (address, port must be fixed)
-  config.action_mailer.default_url_options = { :host => 'innovate-berkeley.herokuapp.com' }
+  # config.action_mailer.default_url_options = { :host => 'innovate-berkeley.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address            => 'smtp.gmail.com',
-    :port               => 587,
-    :domain             => 'gmail.com', #you can also use google.com
-    :authentication     => :plain,
-    :user_name          => 'andrew.veenstra96@gmail.com',
-    :password           => 'staythefuckout1234'
+    :user_name => '5a1a6d1e344e40',
+    :password => 'b0a1693c919307',
+    :address => 'smtp.mailtrap.io',
+    :domain => 'smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
   }
 
   # Do not dump schema after migrations.
