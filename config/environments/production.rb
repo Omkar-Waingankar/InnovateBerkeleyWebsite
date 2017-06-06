@@ -85,8 +85,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'smtp.mailgun.org' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => 'postmaster@sandboxc97e2a8e95654970a003824fe5f87f62.mailgun.org',
-    :password => 'bd66491d5ddac7c21dfce55d8f6dd2d',
+    :user_name => 'andrew@sandboxc97e2a8e95654970a003824fe5f87f62.mailgun.org',
+    :password => 'gXyRVL3Vqr9eSzDV',
     :address => 'smtp.mailgun.org',
     :domain => 'smtp.mailgun.org',
     :port => '587',
