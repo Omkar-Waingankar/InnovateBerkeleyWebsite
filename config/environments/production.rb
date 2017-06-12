@@ -85,8 +85,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'www.innovateberkeley.org' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => 'andrew@sandboxc97e2a8e95654970a003824fe5f87f62.mailgun.org',
-    :password => 'gXyRVL3Vqr9eSzDV',
+    :user_name => 'postmaster@mailer.innovateberkeley.org',
+    :password => '8efe79459b572dd445dd54da9a748da4',
     :address => 'smtp.mailgun.org',
     :domain => 'smtp.mailgun.org',
     :port => '587',
