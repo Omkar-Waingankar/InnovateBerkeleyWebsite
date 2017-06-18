@@ -82,7 +82,7 @@ Rails.application.configure do
   end
 
   # Mailer for Devise FIXME (address, port must be fixed)
-  # config.action_mailer.default_url_options = { :host => 'www.innovateberkeley.org' }
+  config.action_mailer.default_url_options = { :host => 'www.innovateberkeley.org' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :user_name => ENV['gmail_username'],
