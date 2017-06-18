@@ -33,6 +33,8 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use for gmail mailer
+gem 'figaro'
 # Use for Skrollr scrolling functionality
 gem 'skrollr-rails'
 # Use jquery as the JavaScript library
