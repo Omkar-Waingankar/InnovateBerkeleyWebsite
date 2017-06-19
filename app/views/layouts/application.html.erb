@@ -7,6 +7,7 @@
         <title>Innovate Berkeley | <%= @title %></title>
       <% end %>
     	<%= csrf_meta_tags %>
+      <%= favicon_link_tag 'ib-icon.png' %>
 
     	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -17,11 +18,13 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
 				</button>
-    			<%= link_to("innovate berkeley", "/", class: "navbar-brand") %>
-    		</div>
+    		<a href="/" class="navbar-brand")>
+          <%= image_tag "ib-logo.png", class: "navbar-logo"%>
+        </a>
+    	</div>
     		<%= content_tag :div, class: "navbar-collapse collapse", id: "myNavbar" do %>
     			<%= content_tag :ul, class: "nav navbar-nav navbar-right" do %>
     				<%= render 'users/menu/link_items' %>
