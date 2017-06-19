@@ -19,6 +19,7 @@ end
 # Use pg as the database for Active Record in Heroku
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 # Use this for Heroku
 gem 'delayed_job_active_record'
@@ -33,7 +34,6 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'rails_12factor', group: :production
 # Use for gmail mailer
 gem 'figaro'
 # Use for Skrollr scrolling functionality
