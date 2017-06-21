@@ -38,9 +38,10 @@
 
 
 	<script type="text/javascript">
-		var s = skrollr.init();
 
     if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+      var s = skrollr.init();
+
       skrollr.menu.init(s, {
         duration: function(currentTop, targetTop) {
           return 300; //Duration of scrolling animation, in ms
