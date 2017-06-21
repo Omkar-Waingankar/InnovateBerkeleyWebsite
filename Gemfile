@@ -17,7 +17,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 # Use pg as the database for Active Record in Heroku
-group :production do
+group :production, :staging do
   gem 'pg'
   gem 'rails_12factor'
 end
