@@ -8,7 +8,7 @@
 			<%= render 'head-web' %>
 		<% end %>	
 		
-		<div class="row flex-override">
+		<div class="row flex-override grey">
 			<div class="col-xs-2 col-sm-2 valign-center">
 				<h1 class="themes">
 					Themes.
@@ -53,16 +53,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-8 col-sm-offset-1">
-				<h2> Connect With </h2>
-				<h1> Cal Alumni. </h1>
-				<div class="line-gradient"></div>
-				<p>
-					UC Berkeley Alumni will serve as the guiding third party <b>mentors</b> who will give unbiased thoughts and suggestions about improvements to certain solutions. For the alumni who can be a full mentor for Innovate Berkeley, our teams will host <b>weekly phone meetings</b> with them as they tackle their prompts. During the innovation hackathon event, there will be a variety of times for which a mentor can sign up to <b>host workshops.</b>
-				</p>	
-			</div>
-		</div>
+		<% if mobile? %>
+			<%= render 'connect-mobile' %>
+		<% else %>
+			<%= render 'connect-web' %>
+		<% end %>
 		<div class="row">
 			<div class="col-sm-5">
 				<h2> During </h2>

@@ -111,6 +111,10 @@ $ib-gold: #ffd967;
 .about {
 	padding-top: 50px;
 
+	.right {
+		text-align: right;
+	}
+
 	.valign-center {
 		align-self: center;
 	}
@@ -124,6 +128,10 @@ $ib-gold: #ffd967;
   		-webkit-background-clip: text;
   		-webkit-text-fill-color: transparent;
   		padding: 0;
+	}
+
+	.grey {
+		background-color: whitesmoke;
 	}
 
 	.themes {
@@ -168,6 +176,11 @@ $ib-gold: #ffd967;
 .schedule {
 	padding-top: 20px;
 
+	.grey {
+		padding-top: 20px;
+		background-color: whitesmoke;
+	}
+
 	.schedule-title {
 		transform: rotate(-90deg);
 		position: relative;
@@ -175,7 +188,7 @@ $ib-gold: #ffd967;
 	}
 
 	.divider {
-		height: 300px;
+		height: 275px;
 		width: 8px;
 		padding: 0px;
 		text-align: center;
@@ -214,8 +227,7 @@ $ib-gold: #ffd967;
 	padding-top: 30px;
 
 	.faq-wrapper {
-		padding: 50px;
-		margin: 50px;
+		margin: 30px 0;
 	}
 
 	.bullet {
@@ -224,25 +236,52 @@ $ib-gold: #ffd967;
 
 	.skinny {
 		margin-top: 0px;
+		padding-top: 5px;
+	}
+
+	.target-div {
+		height: 10px;
 	}
 
 	.text {
-		font-family: 'Product Sans';
+		font-family: 'Grotesk Medium';
 
-		&:hover {
-			text-decoration: underline;
-			text-decoration-color: $ib-gold;
+		> a {
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:focus {
+				text-decoration: none;
+			}
+
+			> mark {
+				padding: 0 .2em;
+				background-color: white;
+				color: $ib-navy;
+				font-size: 20px;
+			
+				&:hover {
+					background-color: papayawhip;
+					cursor: pointer;
+				}
+			}
 		}
 	}
 
 	.question-title {
 		font-family: 'Product Sans Bold';
 		font-size: 24px;
+		margin-top: 70px;
 	}
 }
 
 .sponsors {
 	padding-top: 30px;
+
+	.filler {
+		height: 700px;
+	}
 }
 
 .line {
@@ -274,4 +313,8 @@ $ib-gold: #ffd967;
 .line-navy {
 	@extend .line;
 	background-color: $ib-navy;
+}
+
+.faq-line {
+	margin: 10px 0;
 }
