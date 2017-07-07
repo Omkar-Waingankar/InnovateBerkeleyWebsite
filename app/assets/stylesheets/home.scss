@@ -1,4 +1,277 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$ib-mint: #17ead9;
+$ib-blue: #6078ea;
+$ib-navy: #252b5f;
+$ib-black: #292929;
+$ib-gold: #ffd967;
 
+@font-face {
+	font-family: 'Product Sans';
+	src:font-url('product-sans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Grotesk Light';
+	src:font-url('HKGrotesk-Light.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Grotesk';
+	src:font-url('HKGrotesk-Regular.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Grotesk Bold';
+	src:font-url('HKGrotesk-Bold.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Product Sans Bold';
+	src:font-url('product-sans-bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Grotesk Medium';
+	src:font-url('HKGrotesk-Medium.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.flex-override {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+	// justify-content: space-around;
+
+	.vertical-align-center {
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: flex;
+
+		.valign-center {
+			align-self: center;
+		}
+	}
+}
+
+.main {
+	height: 700px;
+	background-image: url('icon-white-rotated.svg');
+	background-size: auto 700px;
+
+	.logo-wrapper {
+		width: 100%;
+		margin: 120px 0 50px 0;
+		text-align: right;
+
+		.logo-text {
+			max-width: 500px;
+		}
+	}
+
+	.main-text {
+		font-family: 'Product Sans';
+		color: white;
+		font-size: 30px;
+		line-height: 1.5;
+		text-align: right;
+	}
+
+	.apply-button a {
+		margin-top: 50px;
+		color: white;
+		background-color: $ib-gold;
+		font-size: 42px;
+		font-family: 'Grotesk Bold';
+		padding: 20px 40px;
+		border-radius: 10px;
+		float: right;
+		letter-spacing: 3px;
+
+		&:hover {
+			text-decoration: none;
+			color: $ib-black;
+			cursor: pointer;
+		}
+	}
+}
+
+.about {
+	padding-top: 50px;
+
+	.valign-center {
+		align-self: center;
+	}
+
+	.no-margin {
+		margin-top: 0;
+	}
+
+	.about-impact > h1 > mark {
+		background: -webkit-linear-gradient(45deg, $ib-mint, $ib-blue);
+  		-webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
+  		padding: 0;
+	}
+
+	.themes {
+		transform: rotate(-90deg);
+		position: relative;
+		top: 55px;
+		color: $ib-gold;
+		font-size: 70px;
+	}
+
+	.number {
+		font-size: 60px;
+		color: $ib-navy;
+		font-family: 'Product Sans Bold';
+		text-align: center;
+		align-self: center;
+		background-color: papayawhip;
+	}
+
+	.skinny {
+		margin: 35px 0;
+	}
+
+	.skinny2 {
+		margin: 30px 0;
+	}
+
+	.graphic {
+		width: 100%;
+		max-height: 300px;
+	}
+
+	.web {
+		height: 300px;
+	}
+
+	.mobile {
+		height: 90px;
+	}
+}
+
+.schedule {
+	padding-top: 20px;
+
+	.schedule-title {
+		transform: rotate(-90deg);
+		position: relative;
+		top: 170px;
+	}
+
+	.divider {
+		height: 300px;
+		width: 8px;
+		padding: 0px;
+		text-align: center;
+		background: linear-gradient(0deg, $ib-blue, $ib-mint);
+	}
+
+	.title {
+		font-family: 'Product Sans';
+		font-size: 36px;
+		color: $ib-gold;
+		line-height: 1.25;
+		padding-left: 30px;
+	}
+
+	.description {
+		font-size: 28px;
+		font-family: 'Grotesk';
+		line-height: 1.25;
+	}
+
+	.skinny {
+		margin-bottom: 30px;
+		margin-top: 0px;
+	}
+
+	.mobile-title {
+		font-size: 24px;
+	}
+
+	.mobile-description {
+		font-size: 18px;
+	}
+}
+
+.faq {
+	padding-top: 30px;
+
+	.faq-wrapper {
+		padding: 50px;
+		margin: 50px;
+	}
+
+	.bullet {
+		height: 15px;
+	}
+
+	.skinny {
+		margin-top: 0px;
+	}
+
+	.text {
+		font-family: 'Product Sans';
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: $ib-gold;
+		}
+	}
+
+	.question-title {
+		font-family: 'Product Sans Bold';
+		font-size: 24px;
+	}
+}
+
+.sponsors {
+	padding-top: 30px;
+}
+
+.line {
+	height: 3px;
+	width: 100%;
+	margin: 20px 0;
+}
+	
+.line-gradient {
+	@extend .line;
+	background: linear-gradient(-90deg, $ib-blue, $ib-mint);
+}
+
+.line-yellow {
+	@extend .line;
+	background-color: $ib-gold;
+}
+
+.line-yellow-short {
+	@extend .line-yellow;
+	width: 300px;
+}
+
+.line-black {
+	@extend .line;
+	background-color: $ib-black;
+}
+
+.line-navy {
+	@extend .line;
+	background-color: $ib-navy;
+}

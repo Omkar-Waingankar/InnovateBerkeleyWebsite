@@ -17,4 +17,5 @@
 //= require_tree .
 //= require skrollr
 //= require skrollr.menu
+//= require typed
 

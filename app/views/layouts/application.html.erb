@@ -23,13 +23,13 @@
         	<span class="icon-bar"></span>
 				</button>
     		<a href="/" class="navbar-left">
-          <%= image_tag "ib-icon.png", class: "navbar-ib-logo" %>
+          <%= image_tag "icon-grey.svg", class: "navbar-ib-logo" %>
         </a>
     	</div>
     		<%= content_tag :div, class: "navbar-collapse collapse", id: "myNavbar" do %>
     			<%= content_tag :ul, class: "nav navbar-nav navbar-right" do %>
-    				<%= render 'users/menu/link_items' %>
-    				<%= render 'users/menu/login_items' %>
+    				<%= render 'navbar/link_items' %>
+    				<%= render 'navbar/login_items' %>
     			<% end %>
     		<% end %>
   		</div>
@@ -56,6 +56,12 @@
         $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp()
       });
     })
+
+    var typed = new Typed('.typed-progress', {
+      strings: ["Progress"],
+      typeSpeed: 30
+    });
+
 	</script>
 
 </html>

@@ -1,24 +1,23 @@
-<div class="container">
-	<div class="row" id="about">
-		<div class="voffset9 full-height text-center">
-		About goes here.
+<div class="main">
+	<div class="container">
+		<div class="logo-wrapper">
+			<%= image_tag "text-grey.svg", class: "logo-text" %>
 		</div>
-	</div>
-	<div class="row" id="schedule">
-		<div class="voffset9 full-height text-center">
-		Schedule goes here.
+		<div class="main-text">
+			<mark>October 20 – 22</mark><br>
+			<mark>San Francisco</mark>
 		</div>
-	</div>
-	<div class="row" id="faq">
-		<div class="voffset9 full-height text-center">
-		FAQ goes here.
-		</div>
-	</div>
-	<div class="row" id="sponsors">
-		<div class="voffset9 full-height text-center">
-		Sponsors goes here.
+		<div class="apply-button">
+			<a href="/users/sign_up">APPLY</a>
 		</div>
 	</div>
 </div>
-		
 
+<%= render 'about' %>
+<% if mobile? %>
+	<%= render 'schedule-mobile' %>
+<% else %>
+	<%= render 'schedule' %>
+<% end %>	
+<%= render 'faq' %>
+<%= render 'sponsors' %>

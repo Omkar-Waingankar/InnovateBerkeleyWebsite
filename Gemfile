@@ -9,6 +9,7 @@ end
 gem 'devise'
 # Use the following two gems for bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'typedjs-rails', '~> 1.0.4'
 gem 'autoprefixer-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
