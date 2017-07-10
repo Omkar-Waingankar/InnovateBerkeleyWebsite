@@ -49,18 +49,131 @@
       });
     }
 
-    $(document).ready(function(){
+    $(document).ready(function() {
       $('.navbar .dropdown').hover(function() {
         $(this).find('.dropdown-menu').first().stop(true, true).delay(50).slideDown();
       }, function() {
         $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp()
       });
-    })
-
-    var typed = new Typed('.typed-progress', {
-      strings: ["Progress"],
-      typeSpeed: 30
     });
+
+    $(document).ready(function() {
+      var children = $('.boxes').children();
+      children.each(function(index) {
+        var name = '.' + children[index].className;
+        animateDiv(name);
+      });
+      animateRocket();
+    });
+
+    $(window).scroll(function() {
+      var headTop = $('#head').offset().top;
+      var headHeight = $('#head').outerHeight();
+      var plugTop = $('#plug').offset().top;
+      var plugHeight = $('#plug').outerHeight();
+      var windowHeight = $(window).height();
+      var windowTop = $(this).scrollTop();
+
+      // if (windowTop > (rocketTop + rocketHeight - windowHeight)
+      //   && rocketTop > windowTop 
+      //   && (windowTop + windowHeight > rocketTop + rocketHeight)) {
+      //   animateRocket();
+      // }
+      // if (windowTop > (headTop + headHeight - windowHeight)
+      //   && headTop > windowTop 
+      //   && (windowTop + windowHeight > headTop + headHeight)) {
+      //   animateHead();
+      // }
+      if (windowTop > (plugTop + plugHeight - windowHeight)
+        && plugTop > windowTop 
+        && (windowTop + windowHeight > plugTop + plugHeight)) {
+        console.log('Plug');
+      }
+    });
+
+    function animateHead() {
+      $('.head-nodes').addClass("run-head");
+    };
+
+    function animateRocket() {
+      var $elem = $('#rocket');
+
+      $('#rocket-inner').animate({top: -1000, left: 1000, opacity: 0}, 2000, function() {moveRocket()});
+      $('#rocket').animate({
+        deg: -44
+      }, {
+        duration: 2000,
+        step: function(now) {
+          $elem.css({
+            transform: 'rotate(' + now + 'deg)'
+          });
+        }
+      });
+    };
+
+    function moveRocket() {
+      $('#rocket-inner').animate({top: 100, left: -100}, 2000, function() {replaceRocket()});
+    };
+
+    function replaceRocket() {
+      var $elem = $('#rocket');
+
+      $('#rocket-inner').animate({top: 0, left: 0, opacity: 1}, 2000, function() {animateRocket()}).delay(1000);
+      $('#rocket').animate({
+        deg: 0
+      }, {
+        duration: 2000,
+        step: function(now) {
+          $elem.css({
+            transform: 'rotate(' + now + 'deg)'
+          });
+        }
+      }).delay(1000);
+    };
+
+    function makeNewPosition() {
+      var height = 650;
+      var width = $(window).width() - 200;
+    
+      var randomHeight = Math.floor(Math.random() * height);
+      var randomWidth = Math.floor(Math.random() * width);
+    
+      return [randomHeight, randomWidth];
+    };
+
+    function animateDiv(child) {
+      var newq = makeNewPosition();
+      var oldq = $(child).offset();
+      var speed = calcSpeed([oldq.top, oldq.left], newq);
+      var $elem = $(child);
+    
+      $(child).animate({ 
+        top: newq[0], 
+        left: newq[1], 
+        deg: newq[2] 
+      }, {
+        duration: speed, 
+        complete: function() {
+          animateDiv(child);
+        },
+        step: function(now) {
+          $elem.css({
+            transform: 'rotate(' + now + 'deg)'
+          });
+        }
+      });
+    };
+
+    function calcSpeed(prev, next) {
+      var x = Math.abs(prev[1] - next[1]);
+      var y = Math.abs(prev[0] - next[0]);
+    
+      var greatest = x > y ? x : y;
+      var speedModifier = 0.01;
+      var speed = Math.ceil(greatest/speedModifier);
+
+      return speed;
+    };
 
 	</script>
 

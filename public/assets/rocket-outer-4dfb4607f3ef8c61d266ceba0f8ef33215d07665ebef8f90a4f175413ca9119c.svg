@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.29 205.35">
+	<defs>
+		<style>
+			.cls-1{fill:none;stroke:#252b5f;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}
+			.rocket-inner{fill:none;stroke:#252b5f;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}
+		</style>
+	</defs>
+	<title>simple_rocket</title>
+	<path class="cls-1" d="M16.69,159.43"/>
+	<path class="cls-1" d="M177.52,114.27A86.75,86.75,0,0,1,93.25,201"/>
+	<path class="cls-1" d="M4,114.27A86.75,86.75,0,0,1,90.77,27.53"/>
+</svg>
