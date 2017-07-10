@@ -49,6 +49,27 @@ $ib-gold: #ffd967;
 	font-style: normal;
 }
 
+@keyframes dash {
+  75% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+  	stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes unpack-1 {
 	0% {
   		transform: rotate(90deg);
@@ -380,6 +401,10 @@ $ib-gold: #ffd967;
 
 	.nodes-3 {
 		animation: unpack-3 10s 5s ease infinite;
+	}	
+
+	.plug-head {
+		animation: appear 3s ease infinite;
 	}
 }
 
