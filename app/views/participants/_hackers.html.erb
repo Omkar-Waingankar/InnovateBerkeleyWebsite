@@ -1,4 +1,5 @@
 <% @hackers.each do |hacker| %>
+	<% profile_url = "/" + hacker.id.to_s %>
 	<% gravatar_exists = hacker.gravatar_email != nil && hacker.gravatar_email != "" %>
 	<% email = gravatar_exists ? hacker.gravatar_email : hacker.email %>
 
@@ -14,8 +15,8 @@
   	<% end %>
   <% end %>
 	<div class="col-sm-4 text-center">
-
 		<div>
+			<%= link_to("", profile_url, class: 'dark-hover') %>
 			<%= image_tag(gravatar_url, class: 'small-avatar') %>
 		</div>	
 		<div class="small-name">
