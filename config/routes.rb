@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/participants', to: 'participants#index'
   get '/:id', to: 'users#show'
   get '/users/edit_profile', to: 'users#edit'
+  get '/users/change_picture', to: 'users#change_picture'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

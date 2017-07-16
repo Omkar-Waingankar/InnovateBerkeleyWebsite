@@ -35,8 +35,11 @@ ActiveRecord::Schema.define(version: 20170604065906) do
     t.string   "school_year"
     t.string   "major"
     t.string   "links"
+    t.string   "theme"
     t.string   "interests"
     t.string   "involvements"
+    t.string   "about"
+    t.string   "gravatar_email"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

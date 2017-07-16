@@ -51,10 +51,10 @@ $ib-gold: #ffd967;
 
 @keyframes dash {
   75% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 2000;
   }
   100% {
-  	stroke-dashoffset: 0;
+  	stroke-dashoffset: 2000;
   }
 }
 
@@ -228,9 +228,9 @@ $ib-gold: #ffd967;
 }
 
 .main {
-	height: 700px;
+	height: 100vh;
 	background-image: url('icon-white-rotated.svg');
-	background-size: auto 700px;
+	background-size: auto 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 
@@ -406,6 +406,10 @@ $ib-gold: #ffd967;
 	.plug-head {
 		animation: appear 3s ease infinite;
 	}
+
+	.plug-animation {
+		animation: dash 3s linear infinite;
+	}
 }
 
 .schedule {
@@ -552,4 +556,13 @@ $ib-gold: #ffd967;
 
 .faq-line {
 	margin: 10px 0;
+}
+
+.space {
+	height: 100px;
+}
+
+.login-space {
+	height: 25vh;
+	min-height: 100px;
 }

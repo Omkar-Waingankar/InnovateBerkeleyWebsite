@@ -1,49 +1,47 @@
 <% @title="New Account" %>
 
 <div class="container text-center">
-  <h2>Create an Account</h2>
+<div class="space"></div>
+  <div class="col-sm-6 col-sm-offset-3 card">
+    <div class="title-text">Create an Account</div>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-    <div class="field voffset2">
-      <%= f.label :first_name %><br />
-      <%= f.text_field :first_name, autofocus: true %>
-    </div>
+      <div class="field form-style">
+        <label>First name</label><br />
+        <%= f.text_field :first_name, autofocus: true %>
+      </div>
 
-    <div class="field voffset2">
-      <%= f.label :last_name %><br />
-      <%= f.text_field :last_name %>
-    </div>
+      <div class="field form-style">
+        <label>Last name</label><br />
+        <%= f.text_field :last_name %>
+      </div>
 
-    <div class="field voffset2">
-      <%= f.radio_button :user_type, 'hacker' %>
-      <%= f.label :user_hacker, 'Hacker' %>
-      <%= f.radio_button :user_type, 'mentor' %>
-      <%= f.label :user_mentor, 'Mentor' %>
-    </div>
+      <div class="field form-style">
+        <label>I am a</label>
+        <%= f.select :user_type, ['Hacker', 'Mentor'] %>
+      </div>
 
-    <div class="field voffset2">
-      <%= f.label :email %><br />
-      <%= f.email_field :email %>
-    </div>
+      <div class="field form-style">
+        <label>Email</label><br />
+        <%= f.email_field :email %>
+      </div>
 
-    <div class="field voffset2">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+      <div class="field form-style">
+        <label>Password</label>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
-    <div class="field voffset2">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
+      <div class="field form-style">
+        <label>Password confirmation</label><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
 
-    <div class="button voffset2">
-      <%= f.submit "Create My Account" %>
-    </div>
-  <% end %>
+      <div class="actions form-submit">
+        <%= f.submit "Create My Account" %>
+      </div>
+    <% end %>
+  </div>  
 
 </div>

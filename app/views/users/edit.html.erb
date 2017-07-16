@@ -1,43 +1,52 @@
 <% @title="Edit Profile" %>
 
 <div class="container text-center">
-  <h2>Edit Profile</h2>
+  <div class="space"></div>
+  <div class="col-sm-8 col-sm-offset-2 card">
+    <div class="title-text">Edit Profile</div>
 
-  <%= form_for(current_user, as: 'user', url: '/users', html: { method: :put }) do |f| %>
+    <%= form_for(current_user, as: 'user', url: '/users', html: { method: :put }) do |f| %>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+      <div class="field form-style">
+        <label>Email</label>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
 
-    <div class="field">
-      <%= f.label :school_year %> <br />
-      <%= f.select :school_year, ['Freshman', 'Sophomore', 'Junior', 'Senior'] %>
-    </div>
+      <div class="field form-style">
+        <label>Gravatar email</label>
+        <%= f.email_field :gravatar_email, autofocus: true %>
+      </div>
 
-    <div class="field">
-      <%= f.label :major %><br />
-      <%= f.text_field :major, autocomplete: "on" %>
-    </div>
+      <div class="field form-style">
+        <label>Year in school</label>
+        <%= f.select :school_year, ['Freshman', 'Sophomore', 'Junior', 'Senior'] %>
+      </div>
 
-    <div class="field">
-      <%= f.label :links %><br />
-      <%= f.text_field :links, autocomplete: "on" %>
-    </div>
+      <div class="field form-style">
+        <label>Major</label>
+        <%= f.text_field :major, autocomplete: "on" %>
+      </div>
 
-    <div class="field">
-      <%= f.label :involvements %><br />
-      <%= f.text_field :involvements, autocomplete: "on" %>
-    </div>
+      <div class="field form-style">
+        <label>Links (separate with a ",")</label>
+        <%= f.text_field :links, autocomplete: "on" %>
+      </div>
 
-    <div class="field">
-      <%= f.label "What are you interested in working on?" %><br />
-      <%= f.text_field :interests, autocomplete: "on" %>
-    </div>
+      <div class="field form-style">
+        <label>Campus involvements</label>
+        <%= f.text_field :involvements, autocomplete: "on" %>
+      </div>
 
-    <div class="actions">
-      <%= f.submit "Update" %>
-    </div>
-  <% end %>
+      <div class="field form-style">
+        <label>Tell us about yourself! Why do you want to innovate? What problems are you interested in solving?</label>
+        <%= f.text_field :about, autocomplete: "on" %>
+      </div>
+
+      <div class="actions form-submit">
+        <%= f.submit "Update" %>
+      </div>
+    <% end %>
+  </div> 
+  <div class="space"></div>
 
 </div>

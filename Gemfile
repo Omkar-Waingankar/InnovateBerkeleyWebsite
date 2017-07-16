@@ -7,6 +7,7 @@ end
 
 # Use Devise for authentication
 gem 'devise'
+gem 'digest'
 # Use the following two gems for bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'typedjs-rails', '~> 1.0.4'

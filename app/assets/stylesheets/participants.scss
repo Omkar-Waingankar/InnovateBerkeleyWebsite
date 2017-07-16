@@ -1,3 +1,305 @@
 // Place all the styles related to the participants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$ib-mint: #17ead9;
+$ib-blue: #6078ea;
+$ib-navy: #252b5f;
+$ib-black: #292929;
+$ib-gold: #ffd967;
+
+.flex-override {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+
+	.vertical-align-center {
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: flex;
+
+		.valign-center {
+			align-self: center;
+		}
+	}
+}
+
+.avatar {
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+
+.title-text {
+	font-size: 36px;
+	font-family: 'Product Sans Bold';
+	line-height: 1.1;
+	color: $ib-blue;
+	margin-bottom: 40px;
+}
+
+.participants {
+
+	.row {
+		margin-top: 0;
+	}
+
+	.small-avatar {
+		border-radius: 50%;
+		height: 120px;
+		width: 120px;
+	}
+
+	.small-name {
+		font-size: 20px;
+		font-family: 'Product Sans Bold';
+		line-height: 1.1;
+		color: $ib-black;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.space {
+		height: 20px;
+	}
+
+	.page-top-space {
+		height: 100px;
+	}
+
+}
+
+.card {
+	padding: 20px;
+	border-radius: 8px;
+	background-color: whitesmoke;
+
+	.error-title {
+		font-size: 20px;
+		font-family: 'Product Sans';
+	}
+
+	.error-messages {
+		font-size: 14px;
+		line-height: 1.5;
+		color: red;
+	}
+
+	.change-picture {
+		border-radius: 50%;
+		height: 200px;
+		width: 200px;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+		position: absolute;
+		left: calc(50% - 100px);
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		padding: 85px 0;
+		font-size: 16px;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.spacer {
+		width: 35%;
+		margin-right: 15px;
+		height: 34px;
+		float: left;
+		margin-top: 15px;
+	}
+
+	.desc {
+		margin-bottom: 21px;
+		font-style: italic;
+	}
+
+	.center-style {
+		> label {
+			width: 35%;
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+
+		> input {
+			width: 60%;
+			padding: 1px 4px;
+			border: 1px;
+			border-color: #d3d3d3;
+			border-style: solid;
+
+			&:focus {
+				outline: none;
+				border-width: 1px;
+				border-color: $ib-blue;
+				border-style: solid;
+			}
+		}
+
+		.field_with_errors {
+			width: 60%;
+			padding: 0;
+			border: 0px;
+			margin: 0 auto;
+
+			> input {
+				width: 100%;
+				padding: 1px 4px;
+				border: 1px;
+				border-color: red;
+				border-style: solid;
+
+				&:focus {
+					outline: none;
+					border-width: 1px;
+					border-color: $ib-blue;
+					border-style: solid;
+				}
+			}
+		}
+	}
+
+	.form-style {
+		@extend .flex-override;
+		margin-top: 15px;
+
+		> label {
+			text-align: right;
+			width: 35%;
+			margin-right: 15px;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			float: left;
+		}
+
+		> input {
+			width: 60%;
+			padding: 1px 4px;
+			border: 1px;
+			border-color: #d3d3d3;
+			border-style: solid;
+
+			&:focus {
+				outline: none;
+				border-width: 1px;
+				border-color: $ib-blue;
+				border-style: solid;
+			}
+		}
+
+		> select {
+			width: 60%;
+
+			&:focus {
+				outline: none;
+				border-width: 1px;
+				border-color: $ib-blue;
+				border-style: solid;
+			}
+		}
+
+		.field_with_errors {
+			width: 60%;
+			padding: 0;
+			border: 0px;
+
+			> input {
+				width: 100%;
+				padding: 1px 4px;
+				border: 1px;
+				border-color: red;
+				border-style: solid;
+
+				&:focus {
+					outline: none;
+					border-width: 1px;
+					border-color: $ib-blue;
+					border-style: solid;
+				}
+			}
+		}
+	}
+
+	.remember-box {
+		margin-top: 20px;
+	}
+
+	.form-submit {
+		margin-top: 40px;
+		margin-bottom: 25px;
+
+		> input {
+			color: white;
+			background-color: $ib-gold;
+			font-size: 22px;
+			font-family: 'Grotesk Bold';
+			padding: 6px 30px 5px;
+			border-radius: 8px;
+			border: 0px;
+			letter-spacing: 1px;
+			position: relative;
+			z-index: 100;
+
+			&:hover {
+				text-decoration: none;
+				color: $ib-black;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.divider {
+		background-color: #d3d3d3;
+		height: 1px;
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	.space-small {
+		height: 20px;
+	}
+
+	.name-text {
+		font-size: 28px;
+		font-family: 'Product Sans Bold';
+		line-height: 1.1;
+		color: $ib-black;
+		margin-top: 30px;
+		margin-bottom: 5px;
+	}
+
+	.link-text {
+		color: $ib-blue;
+
+		> a {
+			color: $ib-blue;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.button_to {
+		> input {
+			color: $ib-blue;
+			background-color: whitesmoke;
+			font-size: 14px;
+			font-family: 'Grotesk';
+			border-style: none;
+			position: relative;
+			z-index: 100;
+
+			&:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.error-message {
+
+	}
+}

@@ -1,0 +1,20 @@
+<div class="container text-center">
+  <div class="space"></div>
+  <div class="col-sm-4 col-sm-offset-4 card">
+    <div class="title-text">Change Picture</div>
+
+    <%= form_for(current_user, as: 'user', url: '/users', html: { method: :put }) do |f| %>
+
+      <p>Please enter your Gravatar email below, or click <%= link_to "here", "https://en.gravatar.com/", class: "link-text", target: :_blank %> to edit or create one.</p>
+      <div class="space-small"></div>
+      <div class="field center-style">
+        <%= f.email_field :gravatar_email, autofocus: true %>
+      </div>
+
+      <div class="actions form-submit">
+        <%= f.submit "Update" %>
+      </div>
+    <% end %>
+  </div> 
+
+</div>
