@@ -19,9 +19,11 @@
 		<% if @user.involvements != nil %>
 			<div> <b>Campus Involvements:</b> <%= @user.involvements %></div>
 		<% end %>	
-		<% @found_links.each do |link| %>
-			<div class="link-text"> <%= link_to(link, link, target: :_blank) %></div>	
-		<% end %>
+		<% if @found_links != nil %>
+			<% @found_links.each do |link| %>
+				<div class="link-text"> <%= link_to(link, link, target: :_blank) %></div>	
+			<% end %>
+		<% end %>	
 		<% if current_user.id == @user.id %>
 			<div class="divider"></div>
 			<div class="link-text"><%= link_to('Edit profile', 'users/edit_profile') %></div>
