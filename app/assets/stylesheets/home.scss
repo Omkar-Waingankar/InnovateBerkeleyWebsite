@@ -287,36 +287,36 @@ $ib-gold: #ffd967;
 	.box-1 {
 		@extend .box;
 		background: linear-gradient(-90deg, $ib-blue, $ib-mint);
-		top: 100px;
-		left: 20px;
+		top: 50vh;
+		left: 0vw;
 	}
 
 	.box-2 {
 		@extend .box;
 		background: linear-gradient(-90deg, $ib-blue, $ib-navy);
-		top: 350px;
-		left: 600px;
+		top: 70vh;
+		left: 30vw;
 	}
 
 	.box-3 {
 		@extend .box;
 		background: linear-gradient(-90deg, $ib-gold, $ib-mint);
-		top: 500px;
-		left: 100px;
+		top: 40vh;
+		left: 70vw;
 	}
 
 	.box-4 {
 		@extend .box;
 		background: linear-gradient(-90deg, $ib-blue, lightpink);
-		top: 600px;
-		left: 250px;
+		top: 10vh;
+		left: 20vw;
 	}
 
 	.box-5 {
 		@extend .box;
 		background: linear-gradient(-90deg, lightpink, $ib-gold);
-		top: 400px;
-		left: 500px;
+		top: 80vh;
+		left: 10vw;
 	}
 }
 
