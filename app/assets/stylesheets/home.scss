@@ -318,6 +318,36 @@ $ib-gold: #ffd967;
 		top: 80vh;
 		left: 10vw;
 	}
+
+	.box-6 {
+		@extend .box-1;
+		top: 50vh;
+		left: 25vw;
+	}
+
+	.box-7 {
+		@extend .box-2;
+		top: 80vh;
+		left: 30vw;
+	}
+
+	.box-8 {
+		@extend .box-3;
+		top: 20vh;
+		left: 50vw;
+	}
+
+	.box-9 {
+		@extend .box-4;
+		top: 80vh;
+		left: 10vw;
+	}
+
+	.box-10 {
+		@extend .box-5;
+		top: 80vh;
+		left: 10vw;
+	}
 }
 
 .about {
