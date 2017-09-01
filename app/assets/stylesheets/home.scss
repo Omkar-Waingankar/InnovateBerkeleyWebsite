@@ -229,7 +229,7 @@ $ib-gold: #ffd967;
 
 .main {
 	height: 100vh;
-	background-image: url('icon-background.svg');
+	background-image: url('icon-white-rotated.svg');
 	background-size: auto 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -315,36 +315,6 @@ $ib-gold: #ffd967;
 	.box-5 {
 		@extend .box;
 		background: linear-gradient(-90deg, lightpink, $ib-gold);
-		top: 80vh;
-		left: 10vw;
-	}
-
-	.box-6 {
-		@extend .box-1;
-		top: 50vh;
-		left: 25vw;
-	}
-
-	.box-7 {
-		@extend .box-2;
-		top: 80vh;
-		left: 30vw;
-	}
-
-	.box-8 {
-		@extend .box-3;
-		top: 20vh;
-		left: 50vw;
-	}
-
-	.box-9 {
-		@extend .box-4;
-		top: 80vh;
-		left: 10vw;
-	}
-
-	.box-10 {
-		@extend .box-5;
 		top: 80vh;
 		left: 10vw;
 	}
