@@ -30,4 +30,7 @@ class UsersController < ApplicationController
 
 	def edit
 	end
+
+	def register_team
+	end
 end
