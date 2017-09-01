@@ -320,31 +320,36 @@ $ib-gold: #ffd967;
 	}
 
 	.box-6 {
-		@extend .box-1;
+		@extend .box;
+		background: linear-gradient(-90deg, $ib-blue, $ib-mint);
 		top: 50vh;
 		left: 25vw;
 	}
 
 	.box-7 {
-		@extend .box-2;
+		@extend .box;
+		background: linear-gradient(-90deg, $ib-blue, $ib-navy);
 		top: 80vh;
 		left: 30vw;
 	}
 
 	.box-8 {
-		@extend .box-3;
+		@extend .box;
+		background: linear-gradient(-90deg, $ib-gold, $ib-mint);
 		top: 20vh;
-		left: 50vw;
+		left: 20vw;
 	}
 
 	.box-9 {
-		@extend .box-4;
+		@extend .box;
+		background: linear-gradient(-90deg, $ib-blue, lightpink);
 		top: 80vh;
-		left: 10vw;
+		left: 0vw;
 	}
 
 	.box-10 {
-		@extend .box-5;
+		@extend .box;
+		background: linear-gradient(-90deg, lightpink, $ib-gold);
 		top: 80vh;
 		left: 10vw;
 	}
@@ -352,6 +357,24 @@ $ib-gold: #ffd967;
 
 .about {
 	padding-top: 50px;
+
+	.team-button {
+		color: white;
+		background-color: $ib-gold;
+		font-size: 30px;
+		font-family: 'Product Sans Bold';
+		padding: 15px;
+		border-radius: 10px;
+		position: relative;
+		border: none;
+		z-index: 100;
+
+		&:hover {
+			text-decoration: none;
+			color: $ib-black;
+			cursor: pointer;
+		}
+	}
 
 	.right {
 		text-align: right;
