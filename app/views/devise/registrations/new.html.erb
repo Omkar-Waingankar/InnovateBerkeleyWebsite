@@ -20,7 +20,11 @@
 
       <div class="field form-style">
         <label>I am a</label>
-        <%= f.select :user_type, ['Hacker', 'Mentor'] %>
+        <% if request.fullpath == 'users/y95aaxev' %>
+          <%= f.select :user_type, ['Hacker', 'Mentor'] %>
+        <% else %>
+          <%= f.select :user_type, ['Team Member'] %>
+        <% end %>  
       </div>
 
       <div class="field form-style">

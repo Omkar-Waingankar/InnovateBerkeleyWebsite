@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'registrations' }
+  devise_for :users, controllers: { registrations: 'registrations' }, :path => "users", :path_names => {:sign_up => "register"}
+  
+  devise_scope :user do
+    get '/users/y95aaxev', to: 'registrations#new'
+  end
+
   root 'home#index'
   get '/welcome', to: 'home#confirmation_page'
   get '/participants', to: 'participants#index'
-  get '/users/y95aaxev', to: 'users#register_team'
   get '/team', to: 'home#team'
   get '/:id', to: 'users#show'
   get '/users/edit_profile', to: 'users#edit'
