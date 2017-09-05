@@ -1,5 +1,5 @@
 <% @mentors.each do |mentor| %>
-	<% id = mentor.id %>
+	<% profile_url = "/" + mentor.id.to_s %>
 	<% gravatar_exists = mentor.gravatar_email != nil && mentor.gravatar_email != "" %>
 	<% email = gravatar_exists ? mentor.gravatar_email : mentor.email %>
 
@@ -16,7 +16,7 @@
   <% end %>
 	<div class="col-sm-4 text-center">
 		<div>
-			<%= link_to('/:id', class: 'dark-hover') %>
+			<%= link_to('', profile_url, class: 'dark-hover') %>
 			<%= image_tag(gravatar_url, class: 'small-avatar') %>
 		</div>	
 		<div class="small-name">
