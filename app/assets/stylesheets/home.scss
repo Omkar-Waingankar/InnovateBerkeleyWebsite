@@ -358,6 +358,28 @@ $ib-gold: #ffd967;
 .about {
 	padding-top: 50px;
 
+	.connect-logo {
+		height: 200px;
+		width: 150px;
+		margin: 10px;
+		position: relative;
+
+		> img {
+			position: absolute;
+			left: 0;
+			transition: opacity 0.1s ease-in-out;
+			height: 100%;
+		}
+
+		.lit {
+			opacity: 0;
+		}
+
+		&:hover .lit {
+			opacity: 1;
+		}
+	}
+
 	.team-button {
 		color: white;
 		background-color: $ib-gold;
