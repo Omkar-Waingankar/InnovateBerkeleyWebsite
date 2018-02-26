@@ -23,6 +23,63 @@ $ib-gold: #ffd967;
 	}
 }
 
+.team {
+
+	font-family: 'Product Sans';
+
+	td {
+		padding-bottom: 60px;
+	}
+
+	.bio {
+		text-align: left;
+		padding-left: 20px;
+		text-justify: auto;
+	}
+
+	.bio2 {
+		text-align: right;
+		text-justify: auto;
+	}
+
+	ul { 
+		list-style-type: none; 
+	}
+
+	section {
+		display: inline-block;
+	}
+	
+	.member {
+		left: 0px;
+	}
+
+	h3 {
+		color: #6078EA;
+	}
+
+	.email {
+		font-size: 12px;
+	}
+
+	p {
+		font-family: 'Grotesk Light';
+		src:font-url('HKGrotesk-Light.otf') format('truetype');
+		font-weight: 750;
+		font-style: normal;
+		font-size: 14px;
+	}
+
+	.member-img {
+		width: 250px;
+		height: 250px;
+		border: 2px solid transparent;
+		border-radius: 50%;
+		transition: all 0.5s;
+	}
+
+}
+
 .avatar {
 	border-radius: 50%;
 	height: 200px;
