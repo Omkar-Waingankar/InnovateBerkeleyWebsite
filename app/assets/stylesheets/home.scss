@@ -591,11 +591,25 @@ $ib-gold: #ffd967;
 }
 
 .sponsors {
-	padding-top: 30px;
+
+	h1 {
+		padding-bottom: 50px;
+	}
 
 	.filler {
 		height: 700px;
 	}
+
+	.collection  { 
+	    width: 50%;
+	    max-width: 1000px;
+	}
+
+	.collection .logos {
+		max-width: 100%;
+   		height: auto;
+	}
+
 }
 
 .line {

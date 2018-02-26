@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   end
 
   root 'home#index'
-  get '/welcome', to: 'home#confirmation_page'
-  get '/participants', to: 'participants#index'
+  #get '/welcome', to: 'home#confirmation_page'
+  #get '/participants', to: 'participants#index'
   get '/team', to: 'home#team'
-  get '/:id', to: 'users#show'
-  get '/users/edit_profile', to: 'users#edit'
-  get '/users/change_picture', to: 'users#change_picture'
+  get '/sponsors', to: 'home#sponsors'
+  #get '/:id', to: 'users#show'
+  #get '/users/edit_profile', to: 'users#edit'
+  #get '/users/change_picture', to: 'users#change_picture'
   
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

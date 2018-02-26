@@ -3,9 +3,11 @@
 	<%= content_tag(:li, link_to("Schedule", "#schedule", id: "nav-schedule")) %>
   	<%= content_tag(:li, link_to("FAQ", "#faq", id: "nav-faq")) %>
   	<%= content_tag(:li, link_to("Sponsors", "#sponsors", id: "nav-sponsors")) %>
+  	<%= content_tag(:li, link_to("Team", "team", id: "nav-team")) %>
 <% else %>
 	<%= content_tag(:li, link_to("About", "/#about", id: "nav-about")) %>
 	<%= content_tag(:li, link_to("Schedule", "/#schedule", id: "nav-schedule")) %>
   	<%= content_tag(:li, link_to("FAQ", "/#faq", id: "nav-faq")) %>
-  	<%= content_tag(:li, link_to("Sponsors", "/#sponsors", id: "nav-sponsors")) %>
+  	<%= content_tag(:li, link_to("Sponsors", "#sponsors", id: "nav-sponsors")) %>
+  	<%= content_tag(:li, link_to("Team", "team", id: "nav-team")) %>
 <% end %>

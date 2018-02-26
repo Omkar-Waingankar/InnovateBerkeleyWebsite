@@ -6,4 +6,7 @@ class HomeController < ApplicationController
   	@members = User.where(:user_type => "Team Member")
   	# @members.sort_by { |member| member.last_name }
   end
+
+  def sponsors
+  end
 end
