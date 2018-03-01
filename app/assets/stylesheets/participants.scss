@@ -23,6 +23,11 @@ $ib-gold: #ffd967;
 	}
 }
 
+.first-override {
+	padding-top: 0px;
+	margin-top: 50px;
+}
+
 .team {
 
 	font-family: 'Product Sans';
@@ -87,11 +92,12 @@ $ib-gold: #ffd967;
 }
 
 .title-text {
-	font-size: 36px;
+	margin-top: 30px;
+	font-size: 48px;
 	font-family: 'Product Sans Bold';
 	line-height: 1.1;
 	color: $ib-blue;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 .participants {

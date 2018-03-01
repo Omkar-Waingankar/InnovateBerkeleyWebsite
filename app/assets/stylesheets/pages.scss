@@ -1,3 +1,652 @@
-// Place all the styles related to the Pages controller here.
+// Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the participants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$ib-mint: #17ead9;
+$ib-blue: #6078ea;
+$ib-navy: #252b5f;
+$ib-black: #292929;
+$ib-gold: #ffd967;
+
+.flex-override {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+
+	.vertical-align-center {
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: flex;
+
+		.valign-center {
+			align-self: center;
+		}
+	}
+}
+
+.team {
+
+	font-family: 'Product Sans';
+
+	td {
+		padding-bottom: 60px;
+	}
+
+	.bio {
+		text-align: left;
+		padding-left: 20px;
+		text-justify: auto;
+	}
+
+	.bio2 {
+		text-align: right;
+		text-justify: auto;
+	}
+
+	ul { 
+		list-style-type: none; 
+	}
+
+	section {
+		display: inline-block;
+	}
+	
+	.member {
+		left: 0px;
+	}
+
+	h3 {
+		color: #6078EA;
+	}
+
+	.email {
+		font-size: 12px;
+	}
+
+	p {
+		font-family: 'Grotesk Light';
+		src:font-url('HKGrotesk-Light.otf') format('truetype');
+		font-weight: 750;
+		font-style: normal;
+		font-size: 14px;
+	}
+
+	.member-img {
+		width: 250px;
+		height: 250px;
+		border: 2px solid transparent;
+		border-radius: 50%;
+		transition: all 0.5s;
+	}
+
+}
+
+.avatar {
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+
+.title-text {
+	font-size: 36px;
+	font-family: 'Product Sans Bold';
+	line-height: 1.1;
+	color: $ib-blue;
+	margin-bottom: 40px;
+}
+
+.participants {
+
+	.row {
+		margin-top: 0;
+	}
+
+	.dark-hover {
+		border-radius: 50%;
+		height: 120px;
+		width: 120px;
+		background-color: rgba(0, 0, 0, 0.3);
+		cursor: pointer;
+		position: absolute;
+		opacity: 0;
+		transition: all 0s ease-in-out;
+		font-size: 16px;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.small-avatar {
+		border-radius: 50%;
+		height: 120px;
+		width: 120px;
+	}
+
+	.small-name {
+		font-size: 20px;
+		font-family: 'Grotesk Medium';
+		line-height: 1.1;
+		color: $ib-black;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.space {
+		height: 20px;
+	}
+
+	.page-top-space {
+		height: 100px;
+	}
+
+}
+
+.card {
+	padding: 20px;
+	border-radius: 8px;
+	background-color: whitesmoke;
+
+	.error-title {
+		font-size: 20px;
+		font-family: 'Product Sans';
+	}
+
+	.error-messages {
+		font-size: 14px;
+		line-height: 1.5;
+		color: red;
+	}
+
+	.change-picture {
+		border-radius: 50%;
+		height: 200px;
+		width: 200px;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+		position: absolute;
+		left: calc(50% - 100px);
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		padding: 85px 0;
+		font-size: 16px;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.spacer {
+		width: 35%;
+		margin-right: 15px;
+		height: 34px;
+		float: left;
+		margin-top: 15px;
+	}
+
+	.desc {
+		margin-bottom: 21px;
+		font-style: italic;
+	}
+
+	.center-style {
+		> label {
+			width: 35%;
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+
+		> input {
+			width: 60%;
+			padding: 1px 4px;
+			border: 1px;
+			border-color: #d3d3d3;
+			border-style: solid;
+
+			&:focus {
+				outline: none;
+				border-width: 1px;
+				border-color: $ib-blue;
+				border-style: solid;
+			}
+		}
+
+		.field_with_errors {
+			width: 60%;
+			padding: 0;
+			border: 0px;
+			margin: 0 auto;
+
+			> input {
+				width: 100%;
+				padding: 1px 4px;
+				border: 1px;
+				border-color: red;
+				border-style: solid;
+
+				&:focus {
+					outline: none;
+					border-width: 1px;
+					border-color: $ib-blue;
+					border-style: solid;
+				}
+			}
+		}
+	}
+
+	.form-style {
+		@extend .flex-override;
+		margin-top: 15px;
+
+		> label {
+			text-align: right;
+			width: 35%;
+			margin-right: 15px;
+			margin-top: 2px;
+			margin-bottom: 2px;
+			float: left;
+		}
+
+		> input {
+			width: 60%;
+			padding: 1px 4px;
+			border: 1px;
+			border-color: #d3d3d3;
+			border-style: solid;
+
+			&:focus {
+				outline: none;
+				border-width: 1px;
+				border-color: $ib-blue;
+				border-style: solid;
+			}
+		}
+
+		> select {
+			width: 60%;
+
+			&:focus {
+				outline: none;
+				border-width: 1px;
+				border-color: $ib-blue;
+				border-style: solid;
+			}
+		}
+
+		.field_with_errors {
+			width: 60%;
+			padding: 0;
+			border: 0px;
+
+			> input {
+				width: 100%;
+				padding: 1px 4px;
+				border: 1px;
+				border-color: red;
+				border-style: solid;
+
+				&:focus {
+					outline: none;
+					border-width: 1px;
+					border-color: $ib-blue;
+					border-style: solid;
+				}
+			}
+		}
+	}
+
+	.remember-box {
+		margin-top: 20px;
+	}
+
+	.form-submit {
+		margin-top: 40px;
+		margin-bottom: 25px;
+
+		> input {
+			color: white;
+			background-color: $ib-gold;
+			font-size: 22px;
+			font-family: 'Grotesk Bold';
+			padding: 6px 30px 5px;
+			border-radius: 8px;
+			border: 0px;
+			letter-spacing: 1px;
+			position: relative;
+			z-index: 100;
+
+			&:hover {
+				text-decoration: none;
+				color: $ib-black;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.divider {
+		background-color: #d3d3d3;
+		height: 1px;
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	.space-small {
+		height: 20px;
+	}
+
+	.name-text {
+		font-size: 28px;
+		font-family: 'Product Sans Bold';
+		line-height: 1.1;
+		color: $ib-black;
+		margin-top: 30px;
+		margin-bottom: 5px;
+	}
+
+	.link-text {
+		color: $ib-blue;
+
+		> a {
+			color: $ib-blue;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.button_to {
+		> input {
+			color: $ib-blue;
+			background-color: whitesmoke;
+			font-size: 14px;
+			font-family: 'Grotesk';
+			border-style: none;
+			position: relative;
+			z-index: 100;
+
+			&:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.error-message {
+
+	}
+}
+
+.sponsors {
+
+	h1 {
+		padding-bottom: 50px;
+	}
+
+	.filler {
+		height: 700px;
+	}
+
+	.collection  { 
+	    width: 50%;
+	    max-width: 1000px;
+	}
+
+	.collection .logos {
+		max-width: 100%;
+   		height: auto;
+	}
+
+}
+
+.faq {
+
+	.faq-wrapper {
+		margin-top: 50px;
+		margin-bottom: 30pxl;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.bullet {
+		height: 15px;
+	}
+
+	.skinny {
+		margin-top: 0px;
+		padding-top: 5px;
+	}
+
+	.target-div {
+		height: 10px;
+	}
+
+	.text {
+		font-family: 'Grotesk Medium';
+
+		> a {
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:focus {
+				text-decoration: none;
+			}
+
+			> mark {
+				padding: 0 .2em;
+				background-color: white;
+				color: $ib-navy;
+				font-size: 20px;
+			
+				&:hover {
+					background-color: papayawhip;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.question-title {
+		font-family: 'Product Sans Bold';
+		font-size: 24px;
+		margin-top: 70px;
+	}
+}
+
+.schedule {
+
+	.grey {
+		margin-top: 0px;
+		padding-top: 20px;
+		background-color: whitesmoke;
+	}
+
+	.schedule-title {
+		transform: rotate(-90deg);
+		position: relative;
+		top: 175px;
+	}
+
+	.divider {
+		height: 350px;
+		width: 8px;
+		padding: 0px;
+		text-align: center;
+		background: linear-gradient(0deg, $ib-blue, $ib-mint);
+	}
+
+	.title {
+		font-family: 'Product Sans';
+		font-size: 36px;
+		color: $ib-gold;
+		line-height: 1.25;
+		padding-left: 30px;
+	}
+
+	.description {
+		font-size: 28px;
+		font-family: 'Grotesk';
+		line-height: 1.25;
+	}
+
+	.skinny {
+		margin-bottom: 30px;
+		margin-top: 0px;
+	}
+
+	.mobile-title {
+		font-size: 24px;
+	}
+
+	.mobile-description {
+		font-size: 18px;
+	}
+}
+
+.about {
+
+	.title {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.first {
+		padding-top: 0px;
+		margin-top: 50px;
+	}
+
+	padding-top: 50px;
+
+	.connect-logo {
+		height: 200px;
+		width: 150px;
+		margin: 10px;
+		position: relative;
+
+		> img {
+			position: absolute;
+			left: 0;
+			transition: opacity 0.1s ease-in-out;
+			height: 100%;
+		}
+
+		.lit {
+			opacity: 0;
+		}
+
+		&:hover .lit {
+			opacity: 1;
+		}
+	}
+
+	.team-button {
+		color: white;
+		background-color: $ib-gold;
+		font-size: 30px;
+		font-family: 'Product Sans Bold';
+		padding: 15px;
+		border-radius: 10px;
+		position: relative;
+		border: none;
+		z-index: 100;
+
+		&:hover {
+			text-decoration: none;
+			color: $ib-black;
+			cursor: pointer;
+		}
+	}
+
+	.right {
+		text-align: right;
+	}
+
+	.valign-center {
+		align-self: center;
+	}
+
+	.no-margin {
+		margin-top: 0;
+	}
+
+	.about-impact > h1 > mark {
+		background: -webkit-linear-gradient(45deg, $ib-mint, $ib-blue);
+  		-webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
+  		padding: 0;
+	}
+
+	.grey {
+		background-color: whitesmoke;
+	}
+
+	.themes {
+		transform: rotate(-90deg);
+		position: relative;
+		top: 55px;
+		color: $ib-gold;
+		font-size: 70px;
+	}
+
+	.number {
+		font-size: 60px;
+		color: $ib-navy;
+		font-family: 'Product Sans Bold';
+		text-align: center;
+		align-self: center;
+		background-color: papayawhip;
+	}
+
+	.skinny {
+		margin: 35px 0;
+	}
+
+	.skinny2 {
+		margin: 30px 0;
+	}
+
+	.graphic {
+		width: 100%;
+		max-height: 300px;
+		position: relative;
+		z-index: -1;
+	}
+
+	.rocket {
+		position: absolute;
+		padding-right: 30px;
+	}
+
+	.web {
+		height: 300px;
+	}
+
+	.mobile {
+		height: 90px;
+	}
+
+	.nodes-1 {
+		animation: unpack-1 10s 5s ease infinite;
+	}
+
+	.nodes-2 {
+		animation: unpack-2 10s 5s ease infinite;
+	}
+
+	.nodes-3 {
+		animation: unpack-3 10s 5s ease infinite;
+	}	
+
+	.plug-head {
+		animation: appear 3s ease infinite;
+	}
+
+	.plug-animation {
+		animation: dash 3s linear infinite;
+	}
+}
