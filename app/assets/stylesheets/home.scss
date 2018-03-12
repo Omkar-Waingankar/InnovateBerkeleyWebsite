@@ -246,6 +246,19 @@ $ib-gold: #ffd967;
 		}
 	}
 
+	mark {
+		background-color: $ib-gold;
+    	color: white;
+	}
+
+	a:link {
+    	text-decoration: none;
+	}
+
+	a:visited {
+    	text-decoration: none;
+	}
+
 	.main-text {
 		font-family: 'Product Sans';
 		color: white;
@@ -259,7 +272,7 @@ $ib-gold: #ffd967;
 	.apply-button a {
 		margin-top: 50px;
 		color: white;
-		background-color: $ib-gold;
+		background-color: $ib-navy;
 		font-size: 42px;
 		font-family: 'Grotesk Bold';
 		padding: 20px 40px;

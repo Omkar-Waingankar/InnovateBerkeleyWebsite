@@ -9,4 +9,6 @@ class PagesController < ApplicationController
 	end
 	def about
 	end
+	def spotlight
+	end
 end

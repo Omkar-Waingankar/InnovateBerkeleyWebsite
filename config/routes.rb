@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'faq' => 'pages#faq'
   get 'schedule' => 'pages#schedule'
   get 'about' => 'pages#about'
+  get 'spotlight' => 'pages#spotlightinfo'
+
 end
