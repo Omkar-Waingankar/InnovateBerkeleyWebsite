@@ -227,6 +227,11 @@ $ib-gold: #ffd967;
 	}
 }
 
+mark {
+		background-color: $ib-gold;
+    	color: white;
+	}
+
 .main {
 	height: 100vh;
 	background-image: url('icon-background.svg');
@@ -244,11 +249,6 @@ $ib-gold: #ffd967;
 		.logo-text {
 			max-width: 500px;
 		}
-	}
-
-	mark {
-		background-color: $ib-gold;
-    	color: white;
 	}
 
 	a:link {

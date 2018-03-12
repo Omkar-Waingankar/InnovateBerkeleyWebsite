@@ -472,10 +472,8 @@ $ib-gold: #ffd967;
 		top: 180px;
 	}
 
-	.schedule-title2 {
-		transform: rotate(-90deg);
-		position: relative;
-		top: 80px;
+	#schedule-title-two {
+		top: 82px;
 	}
 
 	.divider {
@@ -486,12 +484,8 @@ $ib-gold: #ffd967;
 		background: linear-gradient(0deg, $ib-blue, $ib-mint);
 	}
 
-	.divider2 {
+	#divider-two {
 		height: 200px;
-		width: 8px;
-		padding: 0px;
-		text-align: center;
-		background: linear-gradient(0deg, $ib-blue, $ib-mint);
 	}
 
 	.title {
@@ -667,6 +661,8 @@ $ib-gold: #ffd967;
 
 .spotlight {
 
-	padding-top: 50px;
+	title {
+		margin-top: 75px;
+	}
 	
 }
