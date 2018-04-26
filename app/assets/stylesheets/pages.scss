@@ -384,7 +384,7 @@ $ib-gold: #ffd967;
 .sponsors {
 
 	h1 {
-		padding-bottom: 50px;
+		padding-bottom: 36px;
 	}
 
 	.filler {
@@ -458,12 +458,22 @@ $ib-gold: #ffd967;
 	}
 }
 
+.old-stuff {
+	position: static;
+}
+
 .schedule {
 
 	.grey {
 		margin-top: 0px;
 		padding-top: 20px;
 		background-color: whitesmoke;
+	}
+
+	.navy {
+		margin-top: 0px;
+		padding-top: 0px;
+		background-color: #252b5f;
 	}
 
 	.schedule-title {
@@ -665,4 +675,27 @@ $ib-gold: #ffd967;
 		margin-top: 75px;
 	}
 	
+}
+
+.new-mission {
+	position: static;
+	background-color: lightblue;
+	text-align: center;
+	border-radius: 30px;
+
+	h2 {
+		padding-top: 36px;
+		margin-bottom: 24px;
+	}
+
+	p {
+		margin-top: 24px;
+		padding-bottom: 36px;
+		margin-left: 48px;
+		margin-right: 48px;
+		font-size: 24px;
+		letter-spacing: 0.3px;
+		word-spacing: 1px; 
+	}
+
 }
