@@ -262,7 +262,7 @@ $ib-gold: #ffd967;
 	.main-text {
 		font-family: 'Product Sans';
 		color: white;
-		font-size: 30px;
+		font-size: 28px;
 		line-height: 1.5;
 		text-align: right;
 		position: relative;
@@ -281,6 +281,7 @@ $ib-gold: #ffd967;
 		letter-spacing: 3px;
 		position: relative;
 		z-index: 100;
+		line-height: 100%;
 
 		&:hover {
 			text-decoration: none;
