@@ -3,13 +3,13 @@
 	<%= content_tag(:li, link_to("Schedule", "schedule", id: "nav-schedule")) %>
   	<%= content_tag(:li, link_to("FAQ", "faq", id: "nav-faq")) %>
   	<%= content_tag(:li, link_to("Sponsors", "sponsors", id: "nav-sponsors")) %>
-    <%= content_tag(:li, link_to("Spotlight", "spotlight", id: "nav-spotlight")) %>
   	<%= content_tag(:li, link_to("Team", "team", id: "nav-team")) %>
+    <%= content_tag(:li, link_to("Apply", "https://docs.google.com/forms/d/e/1FAIpQLSfmrxEVxTRBTucwnIEGszs0BIyuELl2U63kISQXz1KXehaLMQ/viewform", :target => "_blank", id: "nav-apply")) %>
 <% else %>
 	<%= content_tag(:li, link_to("About", "about", id: "nav-about")) %>
 	<%= content_tag(:li, link_to("Schedule", "schedule", id: "nav-schedule")) %>
   	<%= content_tag(:li, link_to("FAQ", "faq", id: "nav-faq")) %>
   	<%= content_tag(:li, link_to("Sponsors", "sponsors", id: "nav-sponsors")) %>
-    <%= content_tag(:li, link_to("Spotlight", "spotlight", id: "nav-spotlight")) %>
   	<%= content_tag(:li, link_to("Team", "team", id: "nav-team")) %>
+    <%= content_tag(:li, link_to("Apply", "https://docs.google.com/forms/d/e/1FAIpQLSfmrxEVxTRBTucwnIEGszs0BIyuELl2U63kISQXz1KXehaLMQ/viewform", :target => "_blank", id: "nav-apply")) %>
 <% end %>
